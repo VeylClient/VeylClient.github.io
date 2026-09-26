@@ -17,7 +17,7 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-10;ba
 .grid-bg{position:fixed;inset:0;z-index:-9;opacity:.45;background-image:linear-gradient(rgba(192,138,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(192,138,255,.025) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(to bottom,#000,transparent 90%)}
 nav{position:fixed;z-index:50;top:0;left:0;right:0;height:72px;padding:0 26px;display:flex;align-items:center;justify-content:space-between;background:rgba(5,4,7,.72);border-bottom:1px solid rgba(255,255,255,.055);backdrop-filter:blur(20px)}
 .brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:.22em;font-size:15px}
-.brand img{width:34px;height:34px;border-radius:8px;box-shadow:0 0 25px rgba(145,76,255,.24)}
+.brand-mark{position:relative;width:34px;height:34px;display:grid;place-items:center;border-radius:8px;background:#050407;border:1px solid rgba(145,76,255,.22);box-shadow:0 0 25px rgba(145,76,255,.18);font-size:22px;font-weight:1000;line-height:1;color:#a35cff;letter-spacing:-.08em;overflow:hidden}.brand-mark:after{content:"";position:absolute;top:4px;bottom:4px;left:50%;width:2px;background:#050407;transform:rotate(18deg);transform-origin:center}
 .navlinks{display:flex;gap:28px;color:#aaa1b4;font-size:13px}
 .navlinks a{transition:.2s}.navlinks a:hover{color:#fff}
 .nav-download{padding:10px 15px!important}
@@ -81,7 +81,7 @@ footer{padding:48px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756
 <div class="grid-bg"></div>
 
 <nav>
-  <a class="brand" href="#"><img src="assets/veyl-logo.png" alt="Veyl logo"><span>VEYL</span></a>
+  <a class="brand" href="#"><span class="brand-mark" aria-hidden="true">V</span><span>VEYL</span></a>
   <div class="navlinks">
     <a href="#features">Features</a><a href="#screenshots">Screenshots</a><a href="#faq">FAQ</a><a href="#download">Download</a>
   </div>
