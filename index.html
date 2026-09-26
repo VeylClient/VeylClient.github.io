@@ -59,7 +59,7 @@ select,.fake-input{width:100%;height:52px;background:#08060b;color:#fff;border:1
 .big-download{width:100%;margin-top:18px;height:56px}
 .notice{margin-top:12px;color:#716979;font-size:12px;line-height:1.6}
 .gallery{display:grid;grid-template-columns:1.35fr 1fr;gap:14px}
-.shot{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:22px;min-height:260px;padding:25px;display:flex;flex-direction:column;justify-content:flex-end;background:#0b0810;isolation:isolate}
+.shot{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:22px;min-height:260px;padding:25px;display:flex;flex-direction:column;justify-content:flex-end;background:#0b0810;isolation:isolate}.shot.real{padding:0;min-height:520px}.shot.real img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}.shot.real:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02) 45%,rgba(0,0,0,.82) 100%);pointer-events:none}.shot.real .real-copy{position:relative;z-index:2;padding:25px}
 .shot:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 65% 28%,rgba(213,174,255,.85),transparent 8%),radial-gradient(circle at 65% 30%,rgba(143,74,255,.72),transparent 23%),radial-gradient(circle at 20% 75%,rgba(79,33,145,.7),transparent 35%),linear-gradient(135deg,#160a2d,#07050a 70%);filter:saturate(1.1)}
 .shot.gui:before{background:linear-gradient(115deg,rgba(20,14,31,.98),rgba(12,11,18,.94)),radial-gradient(circle at 80% 20%,rgba(139,70,255,.3),transparent 30%)}
 .shot.cosmetics:before{background:radial-gradient(circle at 65% 25%,rgba(220,120,255,.55),transparent 22%),linear-gradient(135deg,#24101d,#09070c 70%)}
@@ -149,14 +149,13 @@ footer{padding:48px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756
       <p>A quick look at Veyl's interface, visual features and customization.</p>
     </div>
     <div class="gallery">
-      <div class="shot large">
-        <span class="tag">Visual effects</span>
-        <h3>Skyboxes.</h3>
-        <p>Change the look of your world with customizable skyboxes.</p>
-      </div>
-      <div style="display:grid;gap:14px">
-        <div class="shot gui"><span class="tag">Module GUI</span><h3>Everything in one place.</h3><p>Search, configure and manage Veyl modules from a compact interface.</p></div>
-        <div class="shot cosmetics"><span class="tag">Cosmetics + Skins+</span><h3>Make Minecraft yours.</h3><p>Cosmetics and visual customization made for your Minecraft experience.</p></div>
+      <div class="shot real">
+        <img src="assets/showcase.jpg" alt="Veyl in-game showcase">
+        <div class="real-copy">
+          <span class="tag">Veyl Showcase</span>
+          <h3>Skyboxes.</h3>
+          <p>Change the look of your world with customizable skyboxes.</p>
+        </div>
       </div>
     </div>
   </div>
