@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Veyl — Visual Minecraft Client</title>
+    <meta name="description" content="Veyl is a visual effects Minecraft client.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #050505;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+
+        nav {
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            border-bottom: 1px solid #171717;
+            background: rgba(5, 5, 5, 0.9);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo {
+            width: 34px;
+            height: 34px;
+            position: relative;
+        }
+
+        /* Split V logo */
+
+        .logo::before,
+        .logo::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 31px;
+            background: white;
+            top: 1px;
+        }
+
+        .logo::before {
+            left: 7px;
+            transform: rotate(28deg);
+        }
+
+        .logo::after {
+            right: 7px;
+            transform: rotate(-28deg);
+        }
+
+        .links {
+            display: flex;
+            gap: 28px;
+        }
+
+        .links a {
+            color: #888;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .links a:hover {
+            color: white;
+        }
+
+        /* Hero */
+
+        .hero {
+            min-height: calc(100vh - 72px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glow {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: white;
+            opacity: 0.035;
+            filter: blur(150px);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .tag {
+            display: inline-block;
+            border: 1px solid #242424;
+            background: #0b0b0b;
+            color: #888;
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-size: 12px;
+            margin-bottom: 28px;
+        }
+
+        h1 {
+            font-size: clamp(65px, 12vw, 130px);
+            line-height: 0.9;
+            letter-spacing: -7px;
+            margin-bottom: 28px;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto 38px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .primary {
+            background: white;
+            color: black;
+        }
+
+        .primary:hover {
+            transform: translateY(-2px);
+            background: #ddd;
+        }
+
+        .secondary {
+            border: 1px solid #292929;
+            color: white;
+            background: #0b0b0b;
+        }
+
+        .secondary:hover {
+            border-color: #555;
+            transform: translateY(-2px);
+        }
+
+        /* Features */
+
+        .features {
+            padding: 100px 7%;
+            border-top: 1px solid #171717;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 55px;
+        }
+
+        .grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .card {
+            background: #0a0a0a;
+            border: 1px solid #171717;
+            border-radius: 12px;
+            padding: 28px;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            border-color: #303030;
+            transform: translateY(-3px);
+        }
+
+        .icon {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .card p {
+            color: #777;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        /* Footer */
+
+        footer {
+            border-top: 1px solid #171717;
+            padding: 30px 7%;
+            display: flex;
+            justify-content: space-between;
+            color: #555;
+            font-size: 13px;
+        }
+
+        @media (max-width: 750px) {
+            .links {
+                display: none;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                letter-spacing: -4px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="brand">
+            <div class="logo"></div>
+            VEYL
+        </div>
+
+        <div class="links">
+            <a href="#features">Features</a>
+            <a href="#download">Download</a>
+            <a href="#">Discord</a>
+        </div>
+    </nav>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div class="glow"></div>
+
+            <div class="hero-content">
+
+                <div class="tag">
+                    VISUAL MINECRAFT CLIENT
+                </div>
+
+                <h1>VEYL</h1>
+
+                <p class="subtitle">
+                    A clean, lightweight Minecraft client focused on
+                    visual effects, customization, and performance.
+                </p>
+
+                <div class="buttons">
+                    <a class="button primary" href="#download">
+                        Download Veyl
+                    </a>
+
+                    <a class="button secondary" href="#features">
+                        Explore Features
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="features" id="features">
+
+            <h2 class="section-title">
+                Built for Minecraft
+            </h2>
+
+            <p class="section-subtitle">
+                Simple. Clean. Visual.
+            </p>
+
+            <div class="grid">
+
+                <div class="card">
+                    <div class="icon">✦</div>
+                    <h3>Visual Effects</h3>
+                    <p>
+                        Enhance your Minecraft experience with
+                        customizable visual effects.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">◈</div>
+                    <h3>Lightweight</h3>
+                    <p>
+                        Designed to stay out of your way while
+                        keeping your game running smoothly.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">⌘</div>
+                    <h3>Customizable</h3>
+                    <p>
+                        Configure Veyl to create the exact visual
+                        experience you want.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="features" id="download">
+
+            <h2 class="section-title">
+                Get Veyl
+            </h2>
+
+            <p class="section-subtitle">
+                Downloads will be available here.
+            </p>
+
+            <div class="buttons">
+                <a class="button primary" href="#">
+                    Coming Soon
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <span>© 2026 Veyl</span>
+        <span>Made for Minecraft</span>
+    </footer>
+
+</body>
+</html>
