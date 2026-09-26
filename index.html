@@ -1,1 +1,224 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="theme-color" content="#07050b"><meta name="description" content="Veyl — a clean, visual Minecraft client."><title>Veyl — Visual Minecraft Client</title><style>:root{--bg:#050407;--panel:#0b0811;--text:#f7f4ff;--muted:#a7a0b5;--purple:#8b45ff;--purple2:#b47aff;--line:rgba(180,122,255,.16);--shadow:0 20px 70px rgba(116,45,255,.16)}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,system-ui,sans-serif;color:var(--text);background:radial-gradient(circle at 50% -10%,rgba(130,55,255,.18),transparent 35%),radial-gradient(circle at 90% 45%,rgba(100,35,220,.08),transparent 28%),var(--bg);overflow-x:hidden}a{color:inherit;text-decoration:none}.container{width:min(1120px,calc(100% - 40px));margin:auto}nav{position:fixed;z-index:20;top:0;left:0;right:0;height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;background:rgba(5,4,7,.7);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.05)}.brand-v,.hero-v{font-weight:900;color:#b47aff}.brand-v{font-size:28px;line-height:1}.hero-v{width:min(280px,60vw);margin:0 auto 28px;line-height:0;filter:drop-shadow(0 0 35px rgba(139,69,255,.35));animation:float 5s ease-in-out infinite}.hero-v svg{display:block;width:100%;height:auto}.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.18em}.brand img{width:32px;height:32px}.navlinks{display:flex;gap:26px;color:#aaa2b8;font-size:14px}.navlinks a:hover{color:white}.nav-download{padding:10px 16px;border:1px solid rgba(180,122,255,.35);border-radius:10px;background:rgba(139,69,255,.1)}.hero{min-height:100vh;display:grid;place-items:center;padding:120px 0 70px;text-align:center}.logo-wrap{width:min(280px,60vw);margin:0 auto 28px;animation:float 5s ease-in-out infinite}.logo-wrap img{width:100%;filter:drop-shadow(0 0 35px rgba(139,69,255,.35))}.kicker,.eyebrow{color:#b47aff;text-transform:uppercase;letter-spacing:.22em;font-size:12px;font-weight:800}.kicker{margin-bottom:16px}h1{font-size:clamp(54px,10vw,104px);line-height:.9;letter-spacing:-.075em}.hero p{max-width:650px;margin:24px auto;color:var(--muted);font-size:18px;line-height:1.7}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{border:1px solid rgba(255,255,255,.1);border-radius:13px;padding:15px 22px;font-weight:800;transition:.25s;cursor:pointer}.btn-primary{background:linear-gradient(135deg,#a25dff,#6f2bff);box-shadow:0 12px 35px rgba(118,44,255,.3)}.btn-primary:hover{transform:translateY(-3px)}.btn-secondary{background:rgba(255,255,255,.04)}.btn-secondary:hover{background:rgba(255,255,255,.08);transform:translateY(-2px)}section{padding:100px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:38px}h2{font-size:clamp(32px,5vw,52px);letter-spacing:-.05em}.section-head p{max-width:470px;color:var(--muted);line-height:1.7}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:linear-gradient(180deg,rgba(18,13,27,.92),rgba(9,7,13,.92));border:1px solid var(--line);border-radius:20px;padding:26px;min-height:190px;transition:.3s}.card:hover{transform:translateY(-6px);border-color:rgba(180,122,255,.38);box-shadow:var(--shadow)}.icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(139,69,255,.12);color:#c496ff;margin-bottom:24px}.card h3{font-size:18px;margin-bottom:10px}.card p{color:var(--muted);line-height:1.65;font-size:14px}.download-box{border:1px solid rgba(180,122,255,.25);border-radius:28px;padding:38px;background:radial-gradient(circle at 50% 0,rgba(139,69,255,.16),transparent 50%),var(--panel);box-shadow:var(--shadow)}.download-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}label{display:block;color:#bcb3c9;font-size:12px;font-weight:700;margin-bottom:8px}select{width:100%;background:#08060b;color:white;border:1px solid rgba(255,255,255,.12);padding:15px;border-radius:12px;font:inherit}.big-download{display:flex;align-items:center;justify-content:center;width:100%;min-height:52px}.notice{margin-top:14px;color:#777080;font-size:12px;line-height:1.6}.screens{display:grid;grid-template-columns:1.35fr 1fr;gap:14px}.shot{min-height:260px;border:1px dashed rgba(180,122,255,.22);border-radius:20px;display:grid;place-items:center;background:rgba(139,69,255,.04);color:#716a79;text-align:center;padding:20px}.shot.large{min-height:420px}.faq{max-width:850px}details{border-bottom:1px solid rgba(255,255,255,.08);padding:20px 0}summary{cursor:pointer;font-weight:750;list-style:none}summary:after{content:'+';float:right;color:#a96cff;font-size:22px}details[open] summary:after{content:'−'}details p{color:var(--muted);line-height:1.7;padding:14px 30px 0 0;font-size:14px}footer{padding:55px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756d80}.footer{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.footer strong{color:white}.footer-links{display:flex;gap:20px}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}@media(max-width:800px){nav{padding:0 16px}.navlinks{display:none}.container{width:min(100% - 28px,1120px)}.grid,.download-grid,.screens{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:14px}}.scene{position:fixed;inset:0;z-index:-5;overflow:hidden;background:#030205}.scene:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(180,122,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(180,122,255,.035) 1px,transparent 1px);background-size:70px 70px;mask-image:linear-gradient(to bottom,black,transparent 80%)}.orb{position:absolute;width:520px;height:520px;border-radius:50%;filter:blur(120px);opacity:.15;background:#7c3cff;animation:drift 16s ease-in-out infinite}.orb.a{left:-180px;top:10%}.orb.b{right:-180px;top:52%;background:#5b2cff;animation-delay:-8s}@keyframes drift{50%{transform:translate(80px,-55px) scale(1.15)}}</style></head><body><div class="scene"><div class="orb a"></div><div class="orb b"></div></div><nav><a class="brand" href="#"><span class="brand-v">V</span>VEYL</a><div class="navlinks"><a href="#features">Features</a><a href="#screenshots">Screenshots</a><a href="#faq">FAQ</a><a href="#download">Download</a></div><a class="btn nav-download" href="#download">Download</a></nav><main><section class="hero"><div class="container"><div class="logo-wrap"><div class="hero-v"><svg viewBox="0 0 1254 1254" aria-label="Veyl logo"><defs><linearGradient id="vg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7b3cff"/><stop offset=".55" stop-color="#a45cff"/><stop offset="1" stop-color="#7130ff"/></linearGradient></defs><rect width="1254" height="1254" fill="#000"/><path fill="url(#vg)" d="M310 410h175l128 156v223L310 410z"/><path fill="url(#vg)" d="M944 410H769L641 566v223l303-379z"/></svg></div></div><div class="kicker">Visual Minecraft Client</div><h1>VEYL</h1><p>A clean, focused Minecraft client built around visual polish, useful features and a fast setup.</p><div class="actions"><a class="btn btn-primary" href="#download">Download Veyl ↓</a><a class="btn btn-secondary" href="https://github.com/VeylClient/VeylClient" target="_blank">Source Code ↗</a></div><p style="font-size:12px;color:#777080">Fabric • Fabric API • Select your Minecraft version below</p></div></section><section id="features"><div class="container"><div class="section-head"><div><div class="eyebrow">Built for the experience</div><h2>Everything you need.</h2></div><p>Veyl keeps the interface clean while putting its visual features within easy reach.</p></div><div class="grid"><article class="card"><div class="icon">✦</div><h3>Visual Focus</h3><p>A polished visual experience with a clean interface.</p></article><article class="card"><div class="icon">⌁</div><h3>Clean UI</h3><p>A minimal interface that stays out of the way.</p></article><article class="card"><div class="icon">⚡</div><h3>Fast Setup</h3><p>Choose your version and install the required dependencies.</p></article><article class="card"><div class="icon">◇</div><h3>Customizable</h3><p>Control the way Veyl looks and behaves.</p></article><article class="card"><div class="icon">◎</div><h3>Version Ready</h3><p>Find the Veyl build matching your Minecraft installation.</p></article><article class="card"><div class="icon">↗</div><h3>Open Source</h3><p>Explore the source and follow development.</p></article></div></div></section><section id="download"><div class="container"><div class="download-box"><div class="eyebrow">Get Veyl</div><h2>Ready when you are.</h2><p style="color:var(--muted);margin-top:12px;line-height:1.7">Select your Minecraft version and download the matching Veyl build.</p><div class="download-grid"><div><label for="version">Minecraft Version</label><select id="version"><option>1.20.1</option><option>1.20.2</option><option>1.20.3</option><option>1.20.4</option><option>1.20.5</option><option>1.20.6</option><option>1.21</option><option>1.21.1</option><option>1.21.2</option><option>1.21.3</option><option>1.21.4</option><option>1.21.5</option><option>1.21.6</option><option>1.21.7</option><option>1.21.8</option><option>1.21.9</option><option>1.21.10</option><option>26.1</option><option>26.2</option><option>26.3</option></select></div><div><label>Dependencies</label><div style="padding:15px;border:1px solid rgba(255,255,255,.12);border-radius:12px;color:#d8d0df;background:#08060b">Fabric + Fabric API</div></div></div><div style="margin-top:18px"><button class="btn btn-primary big-download" id="downloadBtn">Download Veyl for <span id="selectedVersion" style="margin-left:6px">1.20.1</span> ↓</button><div class="notice">Download links are placeholders until Veyl builds are uploaded.</div></div></div></div></section><section id="screenshots"><div class="container"><div class="section-head"><div><div class="eyebrow">See Veyl</div><h2>Screenshots.</h2></div><p>Real in-game screenshots can be added here later.</p></div><div class="screens"><div class="shot large">SCREENSHOT 01<br><small>Add a Veyl in-game screenshot here</small></div><div style="display:grid;gap:14px"><div class="shot">SCREENSHOT 02</div><div class="shot">SCREENSHOT 03</div></div></div></div></section><section id="faq"><div class="container"><div class="section-head"><div><div class="eyebrow">Questions</div><h2>FAQ.</h2></div></div><div class="faq"><details open><summary>What is Veyl?</summary><p>Veyl is a Fabric-based Minecraft client focused on a clean visual experience and client-side features.</p></details><details><summary>What does Veyl require?</summary><p>Veyl uses Fabric and Fabric API.</p></details><details><summary>Which Minecraft versions are supported?</summary><p>Only versions with an actual Veyl build should be enabled for download.</p></details><details><summary>Where can I find the source code?</summary><p>Use the Source Code button at the top of the site.</p></details><details><summary>Need help?</summary><p>Email <a href="mailto:veylclient@proton.me" style="color:#bd8cff">veylclient@proton.me</a>.</p></details></div></div></section><section><div class="container"><div class="download-box" style="text-align:center"><div class="eyebrow">Stay connected</div><h2>Follow Veyl.</h2><p style="color:var(--muted);margin:12px auto 24px">Development updates, videos and releases can live here.</p><div class="actions"><a class="btn btn-secondary" href="mailto:veylclient@proton.me">Email</a><a class="btn btn-secondary" href="https://youtube.com/@veylclient" target="_blank">YouTube ↗</a><a class="btn btn-secondary" href="https://github.com/VeylClient/VeylClient" target="_blank">GitHub ↗</a></div></div></div></section></main><footer><div class="container footer"><div><strong>VEYL</strong><br>Visual Minecraft Client</div><div class="footer-links"><a href="mailto:veylclient@proton.me">Contact</a><a href="https://github.com/VeylClient/VeylClient" target="_blank">Source</a><a href="#download">Download</a></div><div>© 2026 Veyl</div></div></footer><script>const v=document.getElementById('version'),s=document.getElementById('selectedVersion');v.onchange=()=>s.textContent=v.value;document.getElementById('downloadBtn').onclick=()=>alert('The download URL for Veyl '+v.value+' will be connected once the build is uploaded.');</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07050b">
+<meta name="description" content="Veyl — an aesthetics-focused Minecraft client with visual customization, client-side utilities, and unique features like Skins+.">
+<title>Veyl — Minecraft Client</title>
+<style>
+:root{--bg:#050407;--bg2:#08050d;--panel:#0c0913;--panel2:#110b1a;--text:#f7f3ff;--muted:#aaa1b8;--purple:#914cff;--purple2:#c08aff;--line:rgba(179,123,255,.17);--glow:rgba(132,61,255,.22)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text);background:var(--bg);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.container{width:min(1160px,calc(100% - 36px));margin:auto}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-10;background:radial-gradient(circle at 50% -15%,rgba(145,76,255,.22),transparent 34%),radial-gradient(circle at 0% 55%,rgba(102,39,210,.12),transparent 30%),radial-gradient(circle at 100% 80%,rgba(166,83,255,.08),transparent 28%)}
+.grid-bg{position:fixed;inset:0;z-index:-9;opacity:.45;background-image:linear-gradient(rgba(192,138,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(192,138,255,.025) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(to bottom,#000,transparent 90%)}
+nav{position:fixed;z-index:50;top:0;left:0;right:0;height:72px;padding:0 26px;display:flex;align-items:center;justify-content:space-between;background:rgba(5,4,7,.72);border-bottom:1px solid rgba(255,255,255,.055);backdrop-filter:blur(20px)}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:.22em;font-size:15px}
+.brand img{width:34px;height:34px;border-radius:8px;box-shadow:0 0 25px rgba(145,76,255,.24)}
+.navlinks{display:flex;gap:28px;color:#aaa1b4;font-size:13px}
+.navlinks a{transition:.2s}.navlinks a:hover{color:#fff}
+.nav-download{padding:10px 15px!important}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:14px 20px;font-weight:800;transition:.25s;cursor:pointer}
+.btn-primary{background:linear-gradient(135deg,#a35cff,#6e2cff);box-shadow:0 12px 38px rgba(110,44,255,.28)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 46px rgba(110,44,255,.38)}
+.btn-secondary{background:rgba(255,255,255,.035)}
+.btn-secondary:hover{background:rgba(255,255,255,.07);transform:translateY(-2px)}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:135px 0 90px}
+.hero-logo{width:min(190px,48vw);margin:0 auto 28px;filter:drop-shadow(0 0 42px rgba(145,76,255,.38));animation:float 5s ease-in-out infinite}
+.hero-logo img{display:block;width:100%;border-radius:28px}
+.kicker,.eyebrow{color:var(--purple2);text-transform:uppercase;letter-spacing:.24em;font-size:11px;font-weight:900}
+.kicker{margin-bottom:15px}
+h1{font-size:clamp(64px,11vw,124px);line-height:.84;letter-spacing:-.09em}
+.hero h1{background:linear-gradient(180deg,#fff,#cdb8e8 75%,#9475b5);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:700px;margin:24px auto;color:var(--muted);font-size:18px;line-height:1.75}
+.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
+.hero-meta{font-size:12px!important;color:#756d80!important;margin-top:17px!important}
+section{padding:105px 0}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:35px;margin-bottom:38px}
+h2{font-size:clamp(34px,5vw,58px);letter-spacing:-.065em}
+.section-head p{max-width:500px;color:var(--muted);line-height:1.75}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(19,13,29,.94),rgba(9,7,13,.94));border:1px solid var(--line);border-radius:20px;padding:27px;min-height:205px;transition:.3s}
+.card:before{content:"";position:absolute;width:130px;height:130px;right:-60px;top:-60px;border-radius:50%;background:rgba(145,76,255,.1);filter:blur(25px)}
+.card:hover{transform:translateY(-6px);border-color:rgba(192,138,255,.4);box-shadow:0 22px 70px rgba(90,30,180,.15)}
+.icon{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:rgba(145,76,255,.11);border:1px solid rgba(192,138,255,.13);color:#c89aff;font-size:18px;margin-bottom:23px}
+.card h3{font-size:18px;margin-bottom:10px}.card p{color:var(--muted);font-size:14px;line-height:1.7}
+.modules{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.module{padding:8px 11px;border-radius:9px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.07);font-size:12px;color:#c5bacd}
+.feature-wide{grid-column:span 2;min-height:230px}
+.skincard{background:radial-gradient(circle at 90% 20%,rgba(181,102,255,.18),transparent 35%),linear-gradient(180deg,rgba(25,14,38,.96),rgba(9,7,13,.96))}
+.download-box{position:relative;overflow:hidden;border:1px solid rgba(192,138,255,.25);border-radius:28px;padding:42px;background:radial-gradient(circle at 50% 0,rgba(145,76,255,.18),transparent 50%),linear-gradient(180deg,#110b19,#09070d);box-shadow:0 25px 90px rgba(87,34,180,.16)}
+.download-box:after{content:"";position:absolute;inset:auto -10% -75% -10%;height:240px;background:rgba(126,54,255,.16);filter:blur(90px)}
+.download-content{position:relative;z-index:1}
+.download-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+label{display:block;color:#bdb4c6;font-size:12px;font-weight:800;margin-bottom:8px}
+select,.fake-input{width:100%;height:52px;background:#08060b;color:#fff;border:1px solid rgba(255,255,255,.11);padding:0 15px;border-radius:12px;font:inherit}
+.big-download{width:100%;margin-top:18px;height:56px}
+.notice{margin-top:12px;color:#716979;font-size:12px;line-height:1.6}
+.gallery{display:grid;grid-template-columns:1.35fr 1fr;gap:14px}
+.shot{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:22px;min-height:260px;padding:25px;display:flex;flex-direction:column;justify-content:flex-end;background:#0b0810;isolation:isolate}
+.shot:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 65% 28%,rgba(213,174,255,.85),transparent 8%),radial-gradient(circle at 65% 30%,rgba(143,74,255,.72),transparent 23%),radial-gradient(circle at 20% 75%,rgba(79,33,145,.7),transparent 35%),linear-gradient(135deg,#160a2d,#07050a 70%);filter:saturate(1.1)}
+.shot.gui:before{background:linear-gradient(115deg,rgba(20,14,31,.98),rgba(12,11,18,.94)),radial-gradient(circle at 80% 20%,rgba(139,70,255,.3),transparent 30%)}
+.shot.cosmetics:before{background:radial-gradient(circle at 65% 25%,rgba(220,120,255,.55),transparent 22%),linear-gradient(135deg,#24101d,#09070c 70%)}
+.shot.large{min-height:430px}
+.shot h3{font-size:21px}.shot p{color:#c8becf;font-size:13px;line-height:1.6;margin-top:6px;max-width:480px}.shot .tag{align-self:flex-start;margin-bottom:auto;padding:7px 10px;border:1px solid rgba(255,255,255,.12);border-radius:8px;background:rgba(0,0,0,.25);font-size:10px;text-transform:uppercase;letter-spacing:.16em;color:#ddd3e7}
+.faq{max-width:900px}
+details{border-bottom:1px solid rgba(255,255,255,.08);padding:21px 0}
+summary{cursor:pointer;font-weight:800;list-style:none}
+summary:after{content:"+";float:right;color:#b47aff;font-size:21px}details[open] summary:after{content:"−"}
+details p{color:var(--muted);line-height:1.75;padding:13px 35px 0 0;font-size:14px}
+footer{padding:48px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756d80}
+.footer{display:flex;justify-content:space-between;gap:25px;align-items:center;flex-wrap:wrap}
+.footer strong{color:#fff;letter-spacing:.16em}.footer-links{display:flex;gap:20px;font-size:13px}.footer-links a:hover{color:#fff}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@media(max-width:820px){nav{padding:0 16px}.navlinks{display:none}.container{width:min(100% - 26px,1160px)}.feature-grid,.download-grid,.gallery{grid-template-columns:1fr}.feature-wide{grid-column:span 1}.section-head{display:block}.section-head p{margin-top:14px}.shot.large{min-height:330px}}
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<nav>
+  <a class="brand" href="#"><img src="assets/veyl-logo.png" alt="Veyl logo"><span>VEYL</span></a>
+  <div class="navlinks">
+    <a href="#features">Features</a><a href="#screenshots">Screenshots</a><a href="#faq">FAQ</a><a href="#download">Download</a>
+  </div>
+  <a class="btn btn-primary nav-download" href="#download">Download</a>
+</nav>
+
+<main>
+<section class="hero">
+  <div class="container">
+    <div class="hero-logo"><img src="assets/veyl-logo.png" alt="Veyl"></div>
+    <div class="kicker">Aesthetics-focused Minecraft Client</div>
+    <h1>VEYL</h1>
+    <p>Make Minecraft look like yours. Veyl is built around aesthetics, visual customization and client-side polish, with useful utilities and a few features that go beyond visuals.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#download">Download Veyl ↓</a>
+      <a class="btn btn-secondary" href="https://github.com/VeylClient/VeylClient" target="_blank">Source Code ↗</a>
+    </div>
+    <p class="hero-meta">Fabric · Fabric API · Minecraft 1.20.1 – 26.3</p>
+  </div>
+</section>
+
+<section id="features">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">What Veyl does</div><h2>Built for visual polish.</h2></div>
+      <p>Veyl puts visual effects, customization and a large module library into one compact client. Most of the experience is visual, with a handful of practical client-side tools alongside it.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="card feature-wide">
+        <div class="icon">✦</div><h3>Visual Effects</h3>
+        <p>Shape the look and feel of your game with effects and visual modules such as motion blur, skyboxes, trails, hit effects, glint, camera effects and more.</p>
+        <div class="modules"><span class="module">Motion Blur</span><span class="module">Skyboxes</span><span class="module">Trails</span><span class="module">Hit Effects</span><span class="module">Camera FX</span><span class="module">Glint</span></div>
+      </article>
+      <article class="card skincard">
+        <div class="icon">◇</div><h3>Skins+</h3>
+        <p>Use Minecraft skin layers for animations and create cosmetics that are genuinely unique to your character.</p>
+      </article>
+      <article class="card">
+        <div class="icon">◎</div><h3>Cosmetics</h3>
+        <p>Customize your character with visual additions, pets, capes and other cosmetic modules.</p>
+      </article>
+      <article class="card">
+        <div class="icon">⌁</div><h3>Nametags</h3>
+        <p>Customize how player names and information appear in-game, with a clean Veyl-style presentation.</p>
+      </article>
+      <article class="card">
+        <div class="icon">▣</div><h3>Module System</h3>
+        <p>A large, organized module menu keeps Veyl's features easy to find, search and configure.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🔊</div><h3>Client Utilities</h3>
+        <p>Some modules go beyond visuals. Sound Blocker, for example, lets you selectively block game sounds from a list.</p>
+      </article>
+      <article class="card">
+        <div class="icon">⚙</div><h3>Deep Customization</h3>
+        <p>Fine-tune individual modules with keybinds, modes, sliders, colors and module-specific settings.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="screenshots">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Inside Veyl</div><h2>See the style.</h2></div>
+      <p>From the galaxy-filled visuals to the module interface and animated cosmetics, Veyl is designed to change the atmosphere of Minecraft without losing the game underneath.</p>
+    </div>
+    <div class="gallery">
+      <div class="shot large">
+        <span class="tag">Visual effects</span>
+        <h3>Transform the atmosphere.</h3>
+        <p>Galaxy-style skies, color, lighting and effects can completely change the mood of a scene.</p>
+      </div>
+      <div style="display:grid;gap:14px">
+        <div class="shot gui"><span class="tag">Module GUI</span><h3>Everything in one place.</h3><p>Search, configure and manage Veyl modules from a compact interface.</p></div>
+        <div class="shot cosmetics"><span class="tag">Cosmetics + Skins+</span><h3>Make your character yours.</h3><p>Visual cosmetics and animated skin-layer features give Veyl its own identity.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="download">
+  <div class="container">
+    <div class="download-box">
+      <div class="download-content">
+        <div class="eyebrow">Get Veyl</div>
+        <h2>Choose your version.</h2>
+        <p style="color:var(--muted);margin-top:12px;line-height:1.7">Select your Minecraft version and download the matching Veyl build.</p>
+        <div class="download-grid">
+          <div>
+            <label for="version">Minecraft Version</label>
+            <select id="version">
+              <option>1.20.1</option><option>1.20.2</option><option>1.20.3</option><option>1.20.4</option><option>1.20.5</option><option>1.20.6</option>
+              <option>1.21</option><option>1.21.1</option><option>1.21.2</option><option>1.21.3</option><option>1.21.4</option><option>1.21.5</option><option>1.21.6</option><option>1.21.7</option><option>1.21.8</option><option>1.21.9</option><option>1.21.10</option><option>1.21.11</option>
+              <option>26.1</option><option>26.2</option><option>26.3</option>
+            </select>
+          </div>
+          <div>
+            <label>Dependencies</label>
+            <div class="fake-input" style="display:flex;align-items:center">Fabric + Fabric API</div>
+          </div>
+        </div>
+        <button class="btn btn-primary big-download" id="downloadBtn">Download Veyl for <span id="selectedVersion">1.20.1</span> ↓</button>
+        <div class="notice">Download links will be connected once the corresponding Veyl builds are uploaded.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">Questions</div><h2>FAQ.</h2></div></div>
+    <div class="faq">
+      <details open><summary>What is Veyl?</summary><p>Veyl is an aesthetics-focused Fabric Minecraft client. It is mainly built around visual effects, customization and improving the visual experience, while also including some non-aesthetic visual features and a few client-side utilities.</p></details>
+      <details><summary>What makes Veyl different?</summary><p>Skins+ is one of Veyl's more unique features. It uses Minecraft skin layers to create animations on your skin, alongside a broad set of visual and cosmetic modules.</p></details>
+      <details><summary>What does Veyl require?</summary><p>Veyl uses Fabric and Fabric API.</p></details>
+      <details><summary>Which Minecraft versions are supported?</summary><p>Veyl supports Minecraft versions <strong>1.20.1 - 26.3</strong>.</p></details>
+      <details><summary>Where can I find the source code?</summary><p>The Veyl source code is available through the Source Code button in the navigation and hero section.</p></details>
+      <details><summary>Need help?</summary><p>Email <a href="mailto:veylclient@proton.me" style="color:#c08aff">veylclient@proton.me</a>.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer">
+    <div><strong>VEYL</strong><br><span>Visual Minecraft Client</span></div>
+    <div class="footer-links"><a href="mailto:veylclient@proton.me">Contact</a><a href="https://youtube.com/@veylclient" target="_blank">YouTube ↗</a><a href="https://github.com/VeylClient/VeylClient" target="_blank">GitHub ↗</a><a href="#download">Download</a></div>
+    <div>© 2026 Veyl</div>
+  </div>
+</footer>
+
+<script>
+const version=document.getElementById("version");
+const selected=document.getElementById("selectedVersion");
+version.addEventListener("change",()=>selected.textContent=version.value);
+document.getElementById("downloadBtn").addEventListener("click",()=>alert("The download URL for Veyl "+version.value+" will be connected once that build is uploaded."));
+</script>
+</body>
+</html>
