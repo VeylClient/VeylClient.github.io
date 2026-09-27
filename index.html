@@ -60,7 +60,11 @@ select,.fake-input{width:100%;height:52px;background:#08060b;color:#fff;border:1
 .notice{margin-top:12px;color:#716979;font-size:12px;line-height:1.6}
 .install{margin-top:28px;padding:24px;border:1px solid rgba(192,138,255,.16);border-radius:18px;background:rgba(255,255,255,.025)}.install h3{font-size:17px;margin-bottom:10px}.install p{color:var(--muted);font-size:13px;line-height:1.65}.install ol{margin:15px 0 0 20px;color:#d8cfdf}.install li{padding:5px 0;font-size:13px;line-height:1.6}.install code{padding:2px 6px;border-radius:6px;background:rgba(145,76,255,.11);color:#d7b7ff;font-size:12px}.install .tip{margin-top:12px;color:#aaa1b8;font-size:12px}
 .gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.shot{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:22px;min-height:260px;padding:25px;display:flex;flex-direction:column;justify-content:flex-end;background:#0b0810;isolation:isolate}.shot.real{padding:0;min-height:0}.shot.real img{position:relative;width:100%;height:auto;object-fit:contain;display:block}.shot.real:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.82) 100%);pointer-events:none}.shot.real .real-copy{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:25px}
+.shot{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:22px;min-height:260px;padding:25px;display:flex;flex-direction:column;justify-content:flex-end;background:#0b0810;isolation:isolate}
+.shot.real{padding:0;min-height:0;overflow:visible}
+.shot.real img{position:relative;width:100%;height:auto;object-fit:contain;display:block;border-radius:21px}
+.shot.real:after{content:"";position:absolute;inset:0;border-radius:21px;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.82) 100%);pointer-events:none}
+.shot.real .real-copy{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:25px}
 .shot:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 65% 28%,rgba(213,174,255,.85),transparent 8%),radial-gradient(circle at 65% 30%,rgba(143,74,255,.72),transparent 23%),radial-gradient(circle at 20% 75%,rgba(79,33,145,.7),transparent 35%),linear-gradient(135deg,#160a2d,#07050a 70%);filter:saturate(1.1)}
 .shot.gui:before{background:linear-gradient(115deg,rgba(20,14,31,.98),rgba(12,11,18,.94)),radial-gradient(circle at 80% 20%,rgba(139,70,255,.3),transparent 30%)}
 .shot.cosmetics:before{background:radial-gradient(circle at 65% 25%,rgba(220,120,255,.55),transparent 22%),linear-gradient(135deg,#24101d,#09070c 70%)}
@@ -80,7 +84,6 @@ footer{padding:48px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756
 </head>
 <body>
 <div class="grid-bg"></div>
-
 <nav>
   <a class="brand" href="#"><span class="brand-mark" aria-hidden="true">V</span><span>VEYL</span></a>
   <div class="navlinks">
@@ -88,11 +91,10 @@ footer{padding:48px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756
   </div>
   <a class="btn btn-primary nav-download" href="#download">Download</a>
 </nav>
-
 <main>
 <section class="hero">
   <div class="container">
-        <div class="kicker">Aesthetics-focused Minecraft Client</div>
+    <div class="kicker">Aesthetics-focused Minecraft Client</div>
     <h1>VEYL</h1>
     <p>Veyl is an aesthetics-focused Minecraft client built around visual customization, effects, cosmetics and useful client-side features.</p>
     <div class="actions">
@@ -102,7 +104,6 @@ footer{padding:48px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756
     <p class="hero-meta">Fabric · Fabric API · Minecraft 26.2</p>
   </div>
 </section>
-
 <section id="features">
   <div class="container">
     <div class="section-head">
@@ -110,39 +111,16 @@ footer{padding:48px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756
       <p>Visual features, customization and a clean module system — with a few useful client-side utilities alongside them.</p>
     </div>
     <div class="feature-grid">
-      <article class="card feature-wide">
-        <div class="icon">✦</div><h3>Visual Effects</h3>
-        <p>Shape the look and feel of your game with effects and visual modules such as motion blur, skyboxes, trails, hit effects, glint, camera effects and more.</p>
-        <div class="modules"><span class="module">Motion Blur</span><span class="module">Skyboxes</span><span class="module">Trails</span><span class="module">Hit Effects</span><span class="module">Camera FX</span><span class="module">Glint</span></div>
-      </article>
-      <article class="card skincard">
-        <div class="icon">◇</div><h3>Skins+</h3>
-        <p>Use Minecraft skin layers for animations and create cosmetics that are genuinely unique to your character.</p>
-      </article>
-      <article class="card">
-        <div class="icon">◎</div><h3>Cosmetics</h3>
-        <p>Customize your character with visual additions, pets, capes and other cosmetic modules.</p>
-      </article>
-      <article class="card">
-        <div class="icon">⌁</div><h3>Nametags</h3>
-        <p>Customize how player names and information appear in-game, with a clean Veyl-style presentation.</p>
-      </article>
-      <article class="card">
-        <div class="icon">▣</div><h3>Module System</h3>
-        <p>A large, organized module menu keeps Veyl's features easy to find, search and configure.</p>
-      </article>
-      <article class="card">
-        <div class="icon">🔊</div><h3>Client Utilities</h3>
-        <p>Some modules go beyond visuals. Sound Blocker, for example, lets you selectively block game sounds from a list.</p>
-      </article>
-      <article class="card">
-        <div class="icon">⚙</div><h3>Deep Customization</h3>
-        <p>Fine-tune individual modules with keybinds, modes, sliders, colors and module-specific settings.</p>
-      </article>
+      <article class="card feature-wide"><div class="icon">✦</div><h3>Visual Effects</h3><p>Shape the look and feel of your game with effects and visual modules such as motion blur, skyboxes, trails, hit effects, glint, camera effects and more.</p><div class="modules"><span class="module">Motion Blur</span><span class="module">Skyboxes</span><span class="module">Trails</span><span class="module">Hit Effects</span><span class="module">Camera FX</span><span class="module">Glint</span></div></article>
+      <article class="card skincard"><div class="icon">◇</div><h3>Skins+</h3><p>Use Minecraft skin layers for animations and create cosmetics that are genuinely unique to your character.</p></article>
+      <article class="card"><div class="icon">◎</div><h3>Cosmetics</h3><p>Customize your character with visual additions, pets, capes and other cosmetic modules.</p></article>
+      <article class="card"><div class="icon">⌁</div><h3>Nametags</h3><p>Customize how player names and information appear in-game, with a clean Veyl-style presentation.</p></article>
+      <article class="card"><div class="icon">▣</div><h3>Module System</h3><p>A large, organized module menu keeps Veyl's features easy to find, search and configure.</p></article>
+      <article class="card"><div class="icon">🔊</div><h3>Client Utilities</h3><p>Some modules go beyond visuals. Sound Blocker, for example, lets you selectively block game sounds from a list.</p></article>
+      <article class="card"><div class="icon">⚙</div><h3>Deep Customization</h3><p>Fine-tune individual modules with keybinds, modes, sliders, colors and module-specific settings.</p></article>
     </div>
   </div>
 </section>
-
 <section id="screenshots">
   <div class="container">
     <div class="section-head">
@@ -152,65 +130,32 @@ footer{padding:48px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756
     <div class="gallery">
       <div class="shot real">
         <img src="assets/showcase.png" alt="Veyl GUI showcase">
-        <div class="real-copy">
-          <span class="tag">Veyl GUI</span>
-          <h3>Interface.</h3>
-          <p>Explore Veyl's clean module interface and customization options.</p>
-        </div>
+        <div class="real-copy"><span class="tag">Veyl GUI</span><h3>Interface.</h3><p>Explore Veyl's clean module interface and customization options.</p></div>
       </div>
       <div class="shot real">
         <img src="assets/showcase.jpg" alt="Veyl skybox showcase">
-        <div class="real-copy">
-          <span class="tag">Veyl Showcase</span>
-          <h3>Skyboxes.</h3>
-          <p>Change the look of your world with customizable skyboxes.</p>
-        </div>
+        <div class="real-copy"><span class="tag">Veyl Showcase</span><h3>Skyboxes.</h3><p>Change the look of your world with customizable skyboxes.</p></div>
       </div>
     </div>
   </div>
 </section>
-
 <section id="download">
   <div class="container">
     <div class="download-box">
       <div class="download-content">
-        <div class="eyebrow">Get Veyl</div>
-        <h2>Choose your version.</h2>
+        <div class="eyebrow">Get Veyl</div><h2>Choose your version.</h2>
         <p style="color:var(--muted);margin-top:12px;line-height:1.7">26.2 is available now. More versions are being ported.</p>
         <div class="download-grid">
-          <div>
-            <label for="version">Minecraft Version</label>
-            <select id="version"><option>26.2</option></select>
-            <div class="version-label">Version status</div>
-            <div class="version-status">
-              <span class="unavailable">26.1</span><span class="available">26.2 ✓</span><span class="unavailable">26.3</span>
-            </div>
-          </div>
-          <div>
-            <label>Dependencies</label>
-            <div class="fake-input" style="display:flex;align-items:center">Fabric + Fabric API</div>
-          </div>
+          <div><label for="version">Minecraft Version</label><select id="version"><option>26.2</option></select><div class="version-label">Version status</div><div class="version-status"><span class="unavailable">26.1</span><span class="available">26.2 ✓</span><span class="unavailable">26.3</span></div></div>
+          <div><label>Dependencies</label><div class="fake-input" style="display:flex;align-items:center">Fabric + Fabric API</div></div>
         </div>
         <button class="btn btn-primary big-download" id="downloadBtn">Download Veyl for <span id="selectedVersion">26.2</span> ↓</button>
         <div class="notice">26.2 is currently available. More versions will be added as ports are completed.</div>
-        <div class="install">
-          <h3>How to install Veyl 26.2</h3>
-          <p>The download is a ZIP file containing the Veyl mod. You also need Fabric API for Minecraft 26.2.</p>
-          <ol>
-            <li>Download Veyl 26.2 using the button above.</li>
-            <li>Open the downloaded ZIP and <strong>unzip/extract it</strong>.</li>
-            <li>Take <code>veyl-1.0.0-26.2.jar</code> from the extracted folder.</li>
-            <li>Open your Minecraft <code>.minecraft</code> folder and open (or create) the <code>mods</code> folder.</li>
-            <li>Put the Veyl JAR <strong>and Fabric API JAR</strong> into the same <code>mods</code> folder.</li>
-            <li>Launch Minecraft using your <strong>Fabric 26.2</strong> profile.</li>
-          </ol>
-          <p class="tip">Tip: Do not put the ZIP itself in the <code>mods</code> folder — extract it first, then put the Veyl JAR there.</p>
-        </div>
+        <div class="install"><h3>How to install Veyl 26.2</h3><p>The download is a ZIP file containing the Veyl mod. You also need Fabric API for Minecraft 26.2.</p><ol><li>Download Veyl 26.2 using the button above.</li><li>Open the downloaded ZIP and <strong>unzip/extract it</strong>.</li><li>Take <code>veyl-1.0.0-26.2.jar</code> from the extracted folder.</li><li>Open your Minecraft <code>.minecraft</code> folder and open (or create) the <code>mods</code> folder.</li><li>Put the Veyl JAR <strong>and Fabric API JAR</strong> into the same <code>mods</code> folder.</li><li>Launch Minecraft using your <strong>Fabric 26.2</strong> profile.</li></ol><p class="tip">Tip: Do not put the ZIP itself in the <code>mods</code> folder — extract it first, then put the Veyl JAR there.</p></div>
       </div>
     </div>
   </div>
 </section>
-
 <section id="faq">
   <div class="container">
     <div class="section-head"><div><div class="eyebrow">Questions</div><h2>FAQ.</h2></div></div>
@@ -225,15 +170,9 @@ footer{padding:48px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756
   </div>
 </section>
 </main>
-
 <footer>
-  <div class="container footer">
-    <div><strong>VEYL</strong><br><span>Visual Minecraft Client</span></div>
-    <div class="footer-links"><a href="mailto:veylclient@proton.me">Contact</a><a href="https://youtube.com/@veylclient" target="_blank">YouTube ↗</a><a href="https://github.com/VeylClient/VeylClient" target="_blank">GitHub ↗</a><a href="#download">Download</a></div>
-    <div>© 2026 Veyl</div>
-  </div>
+  <div class="container footer"><div><strong>VEYL</strong><br><span>Visual Minecraft Client</span></div><div class="footer-links"><a href="mailto:veylclient@proton.me">Contact</a><a href="https://youtube.com/@veylclient" target="_blank">YouTube ↗</a><a href="https://github.com/VeylClient/VeylClient" target="_blank">GitHub ↗</a><a href="#download">Download</a></div><div>© 2026 Veyl</div></div>
 </footer>
-
 <script>
 const version=document.getElementById("version");
 const selected=document.getElementById("selectedVersion");
