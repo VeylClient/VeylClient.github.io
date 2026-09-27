@@ -64,7 +64,7 @@ select,.fake-input{width:100%;height:52px;background:#08060b;color:#fff;border:1
 .shot.real{padding:0;min-height:0;overflow:visible}
 .shot.real:before{display:none}.shot.real img{position:relative;z-index:1;width:100%;height:auto;object-fit:contain;display:block;border-radius:21px}
 .shot.real:after{content:"";position:absolute;inset:0;border-radius:21px;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.82) 100%);pointer-events:none}
-.shot.real .real-copy{position:absolute;left:25px;right:25px;bottom:22px;z-index:2;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.95),0 0 18px rgba(0,0,0,.75)}.shot.real .real-copy h3{color:#d0a1ff;text-shadow:0 2px 10px rgba(0,0,0,.98),0 0 18px rgba(0,0,0,.8)}.shot.real .real-copy p{color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.98),0 0 14px rgba(0,0,0,.75)}
+.shot.real .showcase-caption{position:absolute;left:25px;bottom:22px;z-index:2;color:#fff;text-shadow:0 2px 10px #000,0 0 18px #000}.shot.real .showcase-caption h3{color:#d0a1ff;text-shadow:0 2px 10px #000}.shot.real .showcase-caption p{color:#fff;text-shadow:0 2px 8px #000}
 .shot:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 65% 28%,rgba(213,174,255,.85),transparent 8%),radial-gradient(circle at 65% 30%,rgba(143,74,255,.72),transparent 23%),radial-gradient(circle at 20% 75%,rgba(79,33,145,.7),transparent 35%),linear-gradient(135deg,#160a2d,#07050a 70%);filter:saturate(1.1)}
 .shot.gui:before{background:linear-gradient(115deg,rgba(20,14,31,.98),rgba(12,11,18,.94)),radial-gradient(circle at 80% 20%,rgba(139,70,255,.3),transparent 30%)}
 .shot.cosmetics:before{background:radial-gradient(circle at 65% 25%,rgba(220,120,255,.55),transparent 22%),linear-gradient(135deg,#24101d,#09070c 70%)}
@@ -129,11 +129,11 @@ footer{padding:48px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756
     <div class="gallery">
       <div class="shot real">
         <img src="https://raw.githubusercontent.com/VeylClient/VeylClient.github.io/0f63252d32871d4d3559d8824ebb34a945bc3b27/assets/showcase.png" alt="Veyl GUI showcase">
-        <div class="real-copy"><h3>Interface.</h3><p>Explore Veyl's clean module interface and customization options.</p></div>
+        <div class="showcase-caption"><h3>Interface.</h3><p>Explore Veyl's clean module interface and customization options.</p></div>
       </div>
       <div class="shot real">
         <img src="assets/showcase.png" alt="Veyl skybox showcase">
-        <div class="real-copy"><h3>Visuals.</h3><p>Change the look of your game with customizable visuals.</p></div>
+        <div class="showcase-caption"><h3>Visuals.</h3><p>Change the look of your game with customizable visuals.</p></div>
       </div>
     </div>
   </div>
