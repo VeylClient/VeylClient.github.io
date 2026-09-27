@@ -62,7 +62,7 @@ select,.fake-input{width:100%;height:52px;background:#08060b;color:#fff;border:1
 .gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .shot{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:22px;min-height:260px;padding:25px;display:flex;flex-direction:column;justify-content:flex-end;background:#0b0810;isolation:isolate}
 .shot.real{padding:0;min-height:0;overflow:visible}
-.shot.real img{position:relative;width:100%;height:auto;object-fit:contain;display:block;border-radius:21px}
+.shot.real:before{display:none}.shot.real img{position:relative;z-index:1;width:100%;height:auto;object-fit:contain;display:block;border-radius:21px}
 .shot.real:after{content:"";position:absolute;inset:0;border-radius:21px;background:linear-gradient(180deg,rgba(0,0,0,0) 55%,rgba(0,0,0,.82) 100%);pointer-events:none}
 .shot.real .real-copy{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:25px}
 .shot:before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 65% 28%,rgba(213,174,255,.85),transparent 8%),radial-gradient(circle at 65% 30%,rgba(143,74,255,.72),transparent 23%),radial-gradient(circle at 20% 75%,rgba(79,33,145,.7),transparent 35%),linear-gradient(135deg,#160a2d,#07050a 70%);filter:saturate(1.1)}
@@ -133,7 +133,7 @@ footer{padding:48px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756
         <div class="real-copy"><span class="tag">Veyl GUI</span><h3>Interface.</h3><p>Explore Veyl's clean module interface and customization options.</p></div>
       </div>
       <div class="shot real">
-        <img src="assets/showcase.jpg" alt="Veyl skybox showcase">
+        <img src="assets/showcase-full.png" alt="Veyl skybox showcase">
         <div class="real-copy"><span class="tag">Veyl Showcase</span><h3>Skyboxes.</h3><p>Change the look of your world with customizable skyboxes.</p></div>
       </div>
     </div>
