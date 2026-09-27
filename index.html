@@ -145,7 +145,7 @@ footer{padding:48px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756
         <div class="eyebrow">Get Veyl</div><h2>Choose your version.</h2>
         <p style="color:var(--muted);margin-top:12px;line-height:1.7">26.2 and 26.3 are available now. More versions are being ported.</p>
         <div class="download-grid">
-          <div><label for="version">Minecraft Version</label><select id="version"><option>26.2</option><option>26.3</option></select><div class="version-label">Version status</div><div class="version-status"><span class="unavailable">26.1</span><span class="unavailable">26.1.1</span><span class="unavailable">26.1.2</span><span class="available">26.2 ✓</span><span class="available">26.3 ✓</span></div></div>
+          <div><label for="version">Minecraft Version</label><select id="version"><option>26.2</option><option>26.3</option></select><div class="version-label">Version status</div><div class="version-status"><span class="unavailable">26.1</span><span class="unavailable">26.1.1</span><span class="available">26.1.2 ✓</span><span class="available">26.2 ✓</span><span class="available">26.3 ✓</span></div></div>
           <div><label>Dependencies</label><div class="fake-input" style="display:flex;align-items:center">Fabric + Fabric API</div></div>
         </div>
         <button class="btn btn-primary big-download" id="downloadBtn">Download Veyl for <span id="selectedVersion">26.2</span> ↓</button>
@@ -177,7 +177,9 @@ const version=document.getElementById("version");
 const selected=document.getElementById("selectedVersion");
 selected.textContent=version.value;
 version.addEventListener("change",()=>selected.textContent=version.value);
-document.getElementById("downloadBtn").addEventListener("click",()=>{if(version.value==="26.2"){window.location.href="https://github.com/VeylClient/VeylClient.github.io/releases/download/v1.0.0-26.2/veyl-1.0.0-26.2.zip";}else if(version.value==="26.3"){window.location.href="https://github.com/VeylClient/VeylClient.github.io/releases/download/v1.0.0-26.3/veyl-1.0.0-26.3.zip";}});
+document.getElementById("downloadBtn").addEventListener("click",()=>{if(version.value==="26.1.2"){
+    window.location.href="https://github.com/VeylClient/VeylClient.github.io/releases/download/v1.0.0-26.1.2/veyl-1.0.0-26.1.2.zip";
+  } else if(version.value==="26.2"){window.location.href="https://github.com/VeylClient/VeylClient.github.io/releases/download/v1.0.0-26.2/veyl-1.0.0-26.2.zip";}else if(version.value==="26.3"){window.location.href="https://github.com/VeylClient/VeylClient.github.io/releases/download/v1.0.0-26.3/veyl-1.0.0-26.3.zip";}});
 </script>
 </body>
 </html>
