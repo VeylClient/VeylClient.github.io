@@ -150,7 +150,7 @@ footer{padding:48px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756
         </div>
         <button class="btn btn-primary big-download" id="downloadBtn">Download Veyl for <span id="selectedVersion">26.2</span> ↓</button>
         <div class="notice">26.2 and 26.3 are currently available. More versions will be added as ports are completed.</div>
-        <div class="install"><h3>How to install Veyl <span id="installVersion">26.2</span></h3><p>The download is a ZIP file containing the Veyl mod. You also need Fabric API for Minecraft <span id="installVersionText">26.2</span>.</p><ol><li>Download Veyl <span id="installVersionText2">26.2</span> using the button above.</li><li>Open the downloaded ZIP and <strong>unzip/extract it</strong>.</li><li>Take <code id="jarName">veyl-1.0.0-26.2.jar</code> from the extracted folder.</li><li>Open your Minecraft <code>.minecraft</code> folder and open (or create) the <code>mods</code> folder.</li><li>Put the Veyl JAR <strong>and Fabric API JAR</strong> into the same <code>mods</code> folder.</li><li>Launch Minecraft using your <strong>Fabric <span id="installVersionText3">26.2</span></strong> profile.</li></ol><p class="tip">Tip: Do not put the ZIP itself in the <code>mods</code> folder — extract it first, then put the Veyl JAR there.</p></div>
+        <div class="install"><h3>How to install Veyl</h3><p>The download is a ZIP file containing the Veyl mod. You also need Fabric API for your selected Minecraft version.</p><ol><li>Download Veyl using the button above.</li><li>Open the downloaded ZIP and <strong>unzip/extract it</strong>.</li><li>Take the Veyl JAR from the extracted folder.</li><li>Open your Minecraft <code>.minecraft</code> folder and open (or create) the <code>mods</code> folder.</li><li>Put the Veyl JAR <strong>and Fabric API JAR</strong> for the same Minecraft version into the <code>mods</code> folder.</li><li>Launch Minecraft using your <strong>Fabric profile</strong> for the selected version.</li></ol><p class="tip">Tip: Do not put the ZIP itself in the <code>mods</code> folder — extract it first, then put the Veyl JAR there.</p></div>
       </div>
     </div>
   </div>
@@ -175,22 +175,8 @@ footer{padding:48px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756
 <script>
 const version=document.getElementById("version");
 const selected=document.getElementById("selectedVersion");
-const installVersion=document.getElementById("installVersion");
-const installVersionText=document.getElementById("installVersionText");
-const installVersionText2=document.getElementById("installVersionText2");
-const installVersionText3=document.getElementById("installVersionText3");
-const jarName=document.getElementById("jarName");
-function updateVersionText(){
-  const v=version.value;
-  selected.textContent=v;
-  installVersion.textContent=v;
-  installVersionText.textContent=v;
-  installVersionText2.textContent=v;
-  installVersionText3.textContent=v;
-  jarName.textContent=`veyl-1.0.0-${v}.jar`;
-}
-updateVersionText();
-version.addEventListener("change",updateVersionText);
+selected.textContent=version.value;
+version.addEventListener("change",()=>selected.textContent=version.value);
 document.getElementById("downloadBtn").addEventListener("click",()=>{if(version.value==="26.2"){window.location.href="https://github.com/VeylClient/VeylClient.github.io/releases/download/v1.0.0-26.2/veyl-1.0.0-26.2.zip";}else if(version.value==="26.3"){window.location.href="https://github.com/VeylClient/VeylClient.github.io/releases/download/v1.0.0-26.3/veyl-1.0.0-26.3.zip";}});
 </script>
 </body>
