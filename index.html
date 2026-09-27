@@ -184,7 +184,7 @@ footer{padding:48px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756
             <div class="fake-input" style="display:flex;align-items:center">Fabric + Fabric API</div>
           </div>
         </div>
-        <button class="btn btn-primary big-download" id="downloadBtn">Download Veyl for <span id="selectedVersion">1.20.1</span> ↓</button>
+        <button class="btn btn-primary big-download" id="downloadBtn">Download Veyl for <span id="selectedVersion">26.2</span> ↓</button>
         <div class="notice">26.2 is currently available. More versions will be added as ports are completed.</div>
       </div>
     </div>
@@ -218,7 +218,7 @@ footer{padding:48px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756
 const version=document.getElementById("version");
 const selected=document.getElementById("selectedVersion");
 version.addEventListener("change",()=>selected.textContent=version.value);
-document.getElementById("downloadBtn").addEventListener("click",()=>alert("The download URL for Veyl "+version.value+" will be connected once that build is uploaded."));
+document.getElementById("downloadBtn").addEventListener("click",()=>{if(version.value==="26.2"){window.location.href="https://github.com/VeylClient/VeylClient.github.io/releases/download/v1.0.0-26.2/veyl-1.0.0-26.2.zip";}});
 </script>
 </body>
 </html>
