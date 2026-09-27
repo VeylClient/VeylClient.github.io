@@ -143,13 +143,13 @@ footer{padding:48px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756
     <div class="download-box">
       <div class="download-content">
         <div class="eyebrow">Get Veyl</div><h2>Choose your version.</h2>
-        <p style="color:var(--muted);margin-top:12px;line-height:1.7">26.2 is available now. More versions are being ported.</p>
+        <p style="color:var(--muted);margin-top:12px;line-height:1.7">26.2 and 26.3 are available now. More versions are being ported.</p>
         <div class="download-grid">
-          <div><label for="version">Minecraft Version</label><select id="version"><option>26.2</option></select><div class="version-label">Version status</div><div class="version-status"><span class="unavailable">26.1</span><span class="available">26.2 ✓</span><span class="unavailable">26.3</span></div></div>
+          <div><label for="version">Minecraft Version</label><select id="version"><option>26.2</option><option>26.3</option></select><div class="version-label">Version status</div><div class="version-status"><span class="unavailable">26.1</span><span class="available">26.2 ✓</span><span class="available">26.3 ✓</span></div></div>
           <div><label>Dependencies</label><div class="fake-input" style="display:flex;align-items:center">Fabric + Fabric API</div></div>
         </div>
         <button class="btn btn-primary big-download" id="downloadBtn">Download Veyl for <span id="selectedVersion">26.2</span> ↓</button>
-        <div class="notice">26.2 is currently available. More versions will be added as ports are completed.</div>
+        <div class="notice">26.2 and 26.3 are currently available. More versions will be added as ports are completed.</div>
         <div class="install"><h3>How to install Veyl 26.2</h3><p>The download is a ZIP file containing the Veyl mod. You also need Fabric API for Minecraft 26.2.</p><ol><li>Download Veyl 26.2 using the button above.</li><li>Open the downloaded ZIP and <strong>unzip/extract it</strong>.</li><li>Take <code>veyl-1.0.0-26.2.jar</code> from the extracted folder.</li><li>Open your Minecraft <code>.minecraft</code> folder and open (or create) the <code>mods</code> folder.</li><li>Put the Veyl JAR <strong>and Fabric API JAR</strong> into the same <code>mods</code> folder.</li><li>Launch Minecraft using your <strong>Fabric 26.2</strong> profile.</li></ol><p class="tip">Tip: Do not put the ZIP itself in the <code>mods</code> folder — extract it first, then put the Veyl JAR there.</p></div>
       </div>
     </div>
@@ -177,7 +177,7 @@ const version=document.getElementById("version");
 const selected=document.getElementById("selectedVersion");
 selected.textContent=version.value;
 version.addEventListener("change",()=>selected.textContent=version.value);
-document.getElementById("downloadBtn").addEventListener("click",()=>{if(version.value==="26.2"){window.location.href="https://github.com/VeylClient/VeylClient.github.io/releases/download/v1.0.0-26.2/veyl-1.0.0-26.2.zip";}});
+document.getElementById("downloadBtn").addEventListener("click",()=>{if(version.value==="26.2"){window.location.href="https://github.com/VeylClient/VeylClient.github.io/releases/download/v1.0.0-26.2/veyl-1.0.0-26.2.zip";}else if(version.value==="26.3"){window.location.href="https://github.com/VeylClient/VeylClient.github.io/releases/download/v1.0.0-26.3/veyl-1.0.0-26.3.zip";}});
 </script>
 </body>
 </html>
