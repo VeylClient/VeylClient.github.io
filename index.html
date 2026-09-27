@@ -53,7 +53,7 @@ h2{font-size:clamp(34px,5vw,58px);letter-spacing:-.065em}
 .download-box{position:relative;overflow:hidden;border:1px solid rgba(192,138,255,.25);border-radius:28px;padding:42px;background:radial-gradient(circle at 50% 0,rgba(145,76,255,.18),transparent 50%),linear-gradient(180deg,#110b19,#09070d);box-shadow:0 25px 90px rgba(87,34,180,.16)}
 .download-box:after{content:"";position:absolute;inset:auto -10% -75% -10%;height:240px;background:rgba(126,54,255,.16);filter:blur(90px)}
 .download-content{position:relative;z-index:1}
-.download-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.download-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}.version-status{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.version-status span{padding:7px 10px;border-radius:8px;font-size:12px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.025)}.version-status .unavailable{color:#ff4d5e;text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:#ff334d}.version-status .available{color:#d7b7ff;border-color:rgba(145,76,255,.4);background:rgba(145,76,255,.12);font-weight:900}.version-label{margin-top:22px;color:#aaa1b8;font-size:12px;font-weight:800}
 label{display:block;color:#bdb4c6;font-size:12px;font-weight:800;margin-bottom:8px}
 select,.fake-input{width:100%;height:52px;background:#08060b;color:#fff;border:1px solid rgba(255,255,255,.11);padding:0 15px;border-radius:12px;font:inherit}
 .big-download{width:100%;margin-top:18px;height:56px}
@@ -98,7 +98,7 @@ footer{padding:48px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756
       <a class="btn btn-primary" href="#download">Download Veyl ↓</a>
       <a class="btn btn-secondary" href="https://github.com/VeylClient/VeylClient" target="_blank">Source Code ↗</a>
     </div>
-    <p class="hero-meta">Fabric · Fabric API · Minecraft 1.20.1 – 26.3</p>
+    <p class="hero-meta">Fabric · Fabric API · Minecraft 26.2</p>
   </div>
 </section>
 
@@ -167,15 +167,17 @@ footer{padding:48px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756
       <div class="download-content">
         <div class="eyebrow">Get Veyl</div>
         <h2>Choose your version.</h2>
-        <p style="color:var(--muted);margin-top:12px;line-height:1.7">Select your Minecraft version and download the matching Veyl build.</p>
+        <p style="color:var(--muted);margin-top:12px;line-height:1.7">26.2 is available now. More versions are being ported.</p>
         <div class="download-grid">
           <div>
             <label for="version">Minecraft Version</label>
-            <select id="version">
-              <option>1.20.1</option><option>1.20.2</option><option>1.20.3</option><option>1.20.4</option><option>1.20.5</option><option>1.20.6</option>
-              <option>1.21</option><option>1.21.1</option><option>1.21.2</option><option>1.21.3</option><option>1.21.4</option><option>1.21.5</option><option>1.21.6</option><option>1.21.7</option><option>1.21.8</option><option>1.21.9</option><option>1.21.10</option><option>1.21.11</option>
-              <option>26.1</option><option>26.2</option><option>26.3</option>
-            </select>
+            <select id="version"><option>26.2</option></select>
+            <div class="version-label">Version status</div>
+            <div class="version-status">
+              <span class="unavailable">1.20.1</span><span class="unavailable">1.20.2</span><span class="unavailable">1.20.3</span><span class="unavailable">1.20.4</span><span class="unavailable">1.20.5</span><span class="unavailable">1.20.6</span>
+              <span class="unavailable">1.21</span><span class="unavailable">1.21.1</span><span class="unavailable">1.21.2</span><span class="unavailable">1.21.3</span><span class="unavailable">1.21.4</span><span class="unavailable">1.21.5</span><span class="unavailable">1.21.6</span><span class="unavailable">1.21.7</span><span class="unavailable">1.21.8</span><span class="unavailable">1.21.9</span><span class="unavailable">1.21.10</span><span class="unavailable">1.21.11</span>
+              <span class="unavailable">26.1</span><span class="available">26.2 ✓</span><span class="unavailable">26.3</span>
+            </div>
           </div>
           <div>
             <label>Dependencies</label>
@@ -183,7 +185,7 @@ footer{padding:48px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756
           </div>
         </div>
         <button class="btn btn-primary big-download" id="downloadBtn">Download Veyl for <span id="selectedVersion">1.20.1</span> ↓</button>
-        <div class="notice">Download links will be connected once the corresponding Veyl builds are uploaded.</div>
+        <div class="notice">26.2 is currently available. More versions will be added as ports are completed.</div>
       </div>
     </div>
   </div>
@@ -196,7 +198,7 @@ footer{padding:48px 0 70px;border-top:1px solid rgba(255,255,255,.06);color:#756
       <details open><summary>What is Veyl?</summary><p>Veyl is an aesthetics-focused Fabric Minecraft client. It is mainly built around visual effects, customization and improving the visual experience, while also including some non-aesthetic visual features and a few client-side utilities.</p></details>
       <details><summary>What makes Veyl different?</summary><p>Skins+ is one of Veyl's more unique features. It uses Minecraft skin layers to create animations on your skin, alongside a broad set of visual and cosmetic modules.</p></details>
       <details><summary>What does Veyl require?</summary><p>Veyl uses Fabric and Fabric API.</p></details>
-      <details><summary>Which Minecraft versions are supported?</summary><p>Veyl supports Minecraft versions <strong>1.20.1 - 26.3</strong>.</p></details>
+      <details><summary>Which Minecraft versions are supported?</summary><p>Veyl currently supports Minecraft <strong>26.2</strong>. More versions are being ported.</p></details>
       <details><summary>Where can I find the source code?</summary><p>The Veyl source code is available through the Source Code button in the navigation and hero section.</p></details>
       <details><summary>Need help?</summary><p>Email <a href="mailto:veylclient@proton.me" style="color:#c08aff">veylclient@proton.me</a>.</p></details>
     </div>
